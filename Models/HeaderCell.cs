@@ -22,7 +22,7 @@ namespace oDataToXls.Models
                 }
             }
             if (response == 0)
-                response++;
+                return 1;
             return response;
         }
 

@@ -141,7 +141,7 @@ namespace oDataToXls.Utils
                     var key = dimension.Key;
                     int index = DimensionValues[key].value.IndexOf(DimensionValues[key].value.First(item => item.Key == dataRow[key].ToString()));
                     dimensionOffset += index * dimensionOffsetMultiply;
-                    dimensionOffsetMultiply += DimensionValues[key].value.Count();
+                    dimensionOffsetMultiply = dimensionOffsetMultiply * DimensionValues[key].value.Count();
                 }
                 /// TODO: fix dimension offset
                 foreach (JProperty dataCell in dataRow)
